@@ -1,0 +1,10 @@
+venv/
+log/
+tmp/
+build/
+__pycache__/
+eggs/
+.eggs/
+.idea/
+.settings/
+*.py[cod]
