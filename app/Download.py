@@ -2,7 +2,7 @@
 
 from config import Config
 from Function import *
-
+from bs4 import BeautifulSoup
 
 class Download():
 
@@ -17,6 +17,7 @@ class Download():
 
         init_page = send_request_text('get', self.TARGET)
 
-        print(init_page)
+        soup = BeautifulSoup(init_page)
 
+        print(soup.prettify())
 
