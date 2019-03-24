@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+#项目在Linux平台的初始化脚本；
+
 function get_current_time_stamp()
 {
 echo `date "+%Y/%m/%d %H:%M:%S"`
@@ -33,13 +36,14 @@ export send_warn
 
 
 
-#项目在Linux平台的初始化脚本；
+
 
 run_path=$(cd `dirname $0`;pwd)
 
 tmp_path="$run_path/tmp"
 log_path="$run_path/log"
 script_path="/var/python3/shell"
+
 
 
 if [ ! -d "$tmp_path" ];then
@@ -54,5 +58,8 @@ if [ ! -d "$script_path" ];then
     send_error "$script_path not found..."
 fi
 
+cd $run_path
+git fetch --all
+get pull
 
 
